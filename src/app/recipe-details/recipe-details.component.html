@@ -1,0 +1,13 @@
+<div class="content">
+<img src="{{ recipe.img }}"/>
+
+<h2>{{ recipe.name }}</h2>
+<h3>Ингредиенты</h3>
+<ol>
+  <li *ngFor="let product of recipe.ingredients">
+    {{ product }}
+    <button type="btnAdd" class="btnAdd" (click)="addIngredient(product)">+</button>
+  </li>
+</ol>
+<p *ngIf="recipe.description">{{ recipe.description }}</p>
+</div>

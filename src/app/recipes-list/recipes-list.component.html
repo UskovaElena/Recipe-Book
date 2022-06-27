@@ -1,9 +1,9 @@
 <h2>Главная</h2>
-
-<div *ngFor="let recipe of recipes">
-
-  <a [title]="recipe.name">
-    {{ recipe.name }}
-  </a>
-
+<div class="content">
+  <div *ngFor="let recipe of recipes">
+    <div>
+      <a [routerLink]="['/recipes', recipe.id]" class="btn"
+        >{{ recipe.name }}</a >
+    </div>
+  </div>
 </div>

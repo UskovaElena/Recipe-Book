@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { recipes } from '../recipes';
+import { recipes } from '../app.component';
 
 @Component({
   selector: 'app-recipes-list',
   templateUrl: './recipes-list.component.html',
   styleUrls: ['./recipes-list.component.css']
 })
-export class RecipesListComponent {
+export class RecipesListComponent implements OnInit{
   recipes = recipes;
+  constructor() {}
 
-  share() {
-    window.alert('The product has been shared!');
+  ngOnInit() {
+    this.recipes = recipes;
+    let ingridients = JSON.parse(localStorage.getItem('ingridients'));
+    if (!ingridients) {
+      localStorage.setItem('ingridients', JSON.stringify({}));
+    }
   }
+
 }
