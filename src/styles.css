@@ -8,6 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -53,9 +57,16 @@ a:hover {
 
 /* Input */
 
+input[type="text"] {
+  font-family: inherit; /* 1 */
+  font-size: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
 input {
   font-size: 14px;
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 8px;
   margin-bottom: 16px;
   border: 1px solid #BDBDBD;

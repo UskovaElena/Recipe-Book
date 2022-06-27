@@ -14,13 +14,7 @@ export class RecipeDetailsComponent implements OnInit {
   recipe: Recipe | undefined;
 
   addIngredient(name: string) {
-    let ingridients = JSON.parse(localStorage.getItem('ingridients'));
-    if (name in ingridients) {
-      ingridients[name] += 1;
-    } else {
-      ingridients[name] = 1;
-    }
-    localStorage.setItem('ingridients', JSON.stringify(ingridients));
+    
   }
 
   ngOnInit() {

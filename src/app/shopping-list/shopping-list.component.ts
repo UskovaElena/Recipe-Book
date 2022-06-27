@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ShoppingListComponent implements OnInit {
   constructor() {}
   ingredients = {};
+  newIngredient = '';
 
   ngOnInit() {
     this.ingredients = JSON.parse(localStorage.getItem('ingredients'));
   }
+
 
 }
