@@ -8,7 +8,7 @@ import { recipes } from '../recipes';
   styleUrls: ['./recipes-list.component.css']
 })
 export class RecipesListComponent {
-  products = recipes;
+  recipes = recipes;
 
   share() {
     window.alert('The product has been shared!');

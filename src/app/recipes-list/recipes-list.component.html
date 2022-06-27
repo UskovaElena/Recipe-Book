@@ -1,9 +1,9 @@
-<h2>Рецепты</h2>
+<h2>Главная</h2>
 
-<div *ngFor="let product of products">
+<div *ngFor="let recipe of recipes">
 
-  <h3>
-  {{ recipe.name }}
-  </h3>
+  <a [title]="recipe.name">
+    {{ recipe.name }}
+  </a>
 
 </div>
